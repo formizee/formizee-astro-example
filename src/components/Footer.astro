@@ -1,0 +1,84 @@
+---
+import {Image} from 'astro:assets';
+
+import fileIcon from '../assets/file.svg';
+import globeIcon from '../assets/globe.svg';
+import windowIcon from '../assets/window.svg';
+---
+
+  <footer>
+    <div>
+      <a
+        href="https://docs.formizee.com"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <Image
+          aria-hidden
+          src={fileIcon}
+          alt="File icon"
+          width="16"
+          height="16"
+        />
+        Learn
+      </a>
+      <a
+        href="https://docs.formizee.com/docs/quickstart"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <Image
+          aria-hidden
+          src={windowIcon}
+          alt="Window icon"
+          width="16"
+          height="16"
+        />
+        Examples
+      </a>
+      <a
+        href="https://formizee.com"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <Image
+          aria-hidden
+          src={globeIcon}
+          alt="Globe icon"
+          width="16"
+          height="16"
+        />
+        formizee.com
+      </a>
+    </div>
+  </footer>
+
+<style>
+  footer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 2rem;
+    padding: 8px;
+
+    div {
+      display: flex;
+      flex-direction: row;
+      gap: 2rem;
+    }
+
+    a {
+      gap: 1rem;
+      color: black;
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      font-family: 'Space Grotesk'
+    }
+    a:hover {
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+  }
+</style>
